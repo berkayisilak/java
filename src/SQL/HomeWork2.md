@@ -1,6 +1,6 @@
 ## SQL Ödev 2 | BETWEEN ve IN
 
-<br>
+w<br>
 <br>    
 <br>
 
@@ -41,8 +41,3 @@ SELECT * FROM film
 WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99);
 
 ```
-
-
-<br>
-<br>
-<br>
