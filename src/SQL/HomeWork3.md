@@ -13,8 +13,6 @@ WHERE country ~~ 'A%a'
 
 ```
 
-
-
 <br>
 <br>
 <br>
@@ -28,7 +26,6 @@ WHERE country LIKE '_____%n'
 
 ```
 
-
 <br>
 <br>
 <br>
@@ -41,7 +38,6 @@ SELECT title FROM film
 WHERE title ~~* '%T%T%T%T%' 
 
 ```
-
 
 <br>
 <br>

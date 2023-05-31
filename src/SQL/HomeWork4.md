@@ -12,7 +12,6 @@ SELECT DISTINCT replacement_cost FROM film
 
 ```
 
-
 <br>
 <br>
 <br>
@@ -24,7 +23,6 @@ SELECT DISTINCT replacement_cost FROM film
 SELECT COUNT (DISTINCT replacement_cost) FROM film
 
 ```
-
 
 <br>
 <br>
@@ -43,10 +41,7 @@ WHERE title LIKE 'T%' AND rating = 'G';
 <br>
 <br>
 
-
-
 4-) <strong>country</strong> tablosunda bulunan ülke isimlerinden (country) kaç tanesi <strong>5</strong> karakterden oluşmaktadır?
-
 
 ```
 
