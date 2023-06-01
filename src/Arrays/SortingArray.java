@@ -1,4 +1,4 @@
-package ConditionalStatements;
+package Arrays;
 
 import java.util.Scanner;
 
