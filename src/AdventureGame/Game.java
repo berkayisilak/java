@@ -25,6 +25,7 @@ public class Game {
             System.out.println("3 - Mağara - Ödül - Yemek");
             System.out.println("4 - Orman - Ödül - Odun");
             System.out.println("5 - Nehir - Ödül - Su");
+            System.out.println("6 - Maden - Ödül - Random Item");
             System.out.println("0 - Çıkış Yap");
             System.out.print("Lütfen gitmek istediğiniz bölgeyi seçiniz: ");
             int selectLocation = scan.nextInt();
@@ -39,13 +40,31 @@ public class Game {
                     location = new ToolStore(player);
                     break;
                 case 3:
-                    location = new Cave(player);
-                    break;
+                    if (!player.getInventory().isFood()) {
+                        location = new Cave(player);
+                        break;
+                    } else {
+                        System.out.println("Bu bölgeyi daha önce tamamladın!");
+                        continue;
+                    }
                 case 4:
-                    location = new Forest(player);
-                    break;
+                    if (!player.getInventory().isFirewood()) {
+                        location = new Forest(player);
+                        break;
+                    } else {
+                        System.out.println("Bu bölgeyi daha önce tamamladın!");
+                        continue;
+                    }
                 case 5:
-                    location = new River(player);
+                    if (!player.getInventory().isWater()) {
+                        location = new River(player);
+                        break;
+                    } else {
+                        System.out.println("Bu bölgeyi daha önce tamamladın!");
+                        continue;
+                    }
+                case 6:
+                    location = new Mine(player);
                     break;
                 default:
                     System.out.println("Geçerli bir bölge giriniz!");
@@ -56,6 +75,11 @@ public class Game {
             }
             if (!location.onLocation()) {
                 System.out.println("Öldünüz");
+                break;
+            }
+
+            if (player.getInventory().isFood() && player.getInventory().isWater() && player.getInventory().isFirewood()) {
+                System.out.println("\n\nOyunu kazandınız, tebrikler!");
                 break;
             }
         }
